@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Анемона — цветочная мастерская</title>
+  <meta name="description" content="Анемона — сезонная цветочная мастерская. Букеты из садовых и полевых цветов, конструктор букетов, доставка. Демо-версия с вымышленными данными.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Marck+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <nav class="nav nav--left">
+    <a href="#about">о нас</a>
+    <a href="#catalog">каталог</a>
+    <a href="#constructor">конструктор</a>
+  </nav>
+  <a href="#top" class="logo">
+    <span class="logo__name">Анемона</span>
+    <span class="logo__sub">мастерская цветочных историй</span>
+  </a>
+  <nav class="nav nav--right">
+    <a href="#delivery">доставка</a>
+    <a href="#contacts">контакты</a>
+    <button class="pill pill--header" id="cartOpen" aria-label="Открыть корзину">корзина <b id="cartCount">0</b></button>
+  </nav>
+  <button class="burger" id="burger" aria-label="Меню"><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">о нас</a>
+  <a href="#catalog">каталог</a>
+  <a href="#constructor">конструктор</a>
+  <a href="#delivery">доставка</a>
+  <a href="#contacts">контакты</a>
+  <button class="pill" data-open-cart>корзина</button>
+</div>
+
+<main id="top">
+
+<section class="hero">
+  <canvas id="petals" aria-hidden="true"></canvas>
+  <div class="hero__bq hero__bq--l" data-art="bouquet" data-palette="white" data-seed="11" data-count="11" aria-hidden="true"></div>
+  <div class="hero__bq hero__bq--r" data-art="bouquet" data-palette="blush" data-seed="23" data-count="11" aria-hidden="true"></div>
+
+  <div class="hero__center">
+    <p class="eyebrow" data-reveal>сезонная цветочная мастерская</p>
+    <h1 class="brand" data-reveal style="--d:.1s">
+      Анемона
+      <span class="brand__script">flowers &amp; stories</span>
+    </h1>
+    <p class="hero__lead" data-reveal style="--d:.25s">
+      Цветём раз в год, чтобы остаться<br>в сердце <em>навсегда</em>
+    </p>
+    <div class="hero__actions" data-reveal style="--d:.4s">
+      <a href="#constructor" class="pill pill--rose">[собрать букет]</a>
+      <a href="#catalog" class="pill pill--line">смотреть каталог</a>
+    </div>
+  </div>
+
+  <ul class="hero__social" data-reveal style="--d:.6s">
+    <li><a href="#contacts">[telegram]</a></li>
+    <li><a href="#contacts">[instagram]</a></li>
+    <li><a href="#contacts">[whatsapp]</a></li>
+  </ul>
+  <p class="hero__note" data-reveal style="--d:.7s">срезано с любовью,<br>доставлено с заботой</p>
+  <a href="#about" class="scroll-hint" aria-label="Прокрутить вниз"><span></span></a>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>свежие срезы каждое утро</span><i>✿</i><span>садовые и полевые цветы</span><i>✿</i><span>авторские букеты</span><i>✿</i><span>доставка по городу за 90 минут</span><i>✿</i>
+    <span>свежие срезы каждое утро</span><i>✿</i><span>садовые и полевые цветы</span><i>✿</i><span>авторские букеты</span><i>✿</i><span>доставка по городу за 90 минут</span><i>✿</i>
+  </div>
+</div>
+
+<section class="about section" id="about">
+  <div class="about__line about__line--l" data-line="9" aria-hidden="true"></div>
+  <div class="about__line about__line--r" data-line="7" aria-hidden="true"></div>
+
+  <div class="about__grid">
+    <div class="about__text" data-reveal>
+      <h2 class="title">Цветочная философия</h2>
+      <p>«Анемона» — сезонная мастерская цветочных историй. Мы работаем с тем, что растёт рядом: собираем букеты из садовых и полевых цветов — как письмо из самого тёплого времени года.</p>
+      <p>Никакой пластиковой упаковки и «идеальных» роз под линейку. Только живые стебли, неровные края и настроение, которое хочется сохранить.</p>
+      <div class="stats">
+        <div><b data-count="6">0</b><span>лет в цветах</span></div>
+        <div><b data-count="4200">0</b><span>собранных букетов</span></div>
+        <div><b data-count="38">0</b><span>видов сезонных цветов</span></div>
+      </div>
+    </div>
+
+    <figure class="oval" data-reveal style="--d:.15s">
+      <div class="oval__frame">
+        <div class="oval__art" data-art="bouquet" data-palette="wild" data-seed="5" data-count="12"></div>
+      </div>
+      <figcaption class="oval__script">Каждый букет мимолётный, как лето. И вечный, как воспоминание о нём.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="strip" aria-hidden="true">
+  <div class="strip__row" id="stripRow"></div>
+</section>
+
+<section class="catalog section" id="catalog">
+  <div class="section__head" data-reveal>
+    <h2 class="title">Что расцвело сегодня</h2>
+    <div class="filters" id="filters" role="tablist" aria-label="Категории"></div>
+  </div>
+  <div class="grid" id="grid"></div>
+  <p class="demo-note" data-reveal>* демо-версия: все товары, цены и описания вымышлены</p>
+</section>
+
+<section class="constructor section" id="constructor">
+  <div class="constructor__grid">
+    <div class="constructor__intro" data-reveal>
+      <h2 class="title title--sm">Конструктор <span class="script-inline">букетов</span></h2>
+      <p>От нежного эскиза в воображении до ароматного шедевра в руках. Выберите повод, цвета и размер — мы соберём именно такой букет.</p>
+
+      <div class="step">
+        <h3><i>1</i> Повод</h3>
+        <div class="chips" id="occasions"></div>
+      </div>
+      <div class="step">
+        <h3><i>2</i> Палитра</h3>
+        <div class="swatches" id="palettes"></div>
+      </div>
+      <div class="step">
+        <h3><i>3</i> Размер</h3>
+        <div class="chips" id="sizes"></div>
+      </div>
+      <div class="step">
+        <h3><i>4</i> Пожелание к открытке</h3>
+        <input class="field" id="wish" maxlength="60" placeholder="например: «Маме с любовью»">
+      </div>
+    </div>
+
+    <div class="constructor__preview" data-reveal style="--d:.15s">
+      <div class="preview">
+        <div class="preview__arch"><div class="preview__art" id="previewArt"></div></div>
+        <div class="preview__info">
+          <p class="preview__name" id="previewName"></p>
+          <p class="preview__desc" id="previewDesc"></p>
+          <p class="preview__price" id="previewPrice"></p>
+          <button class="pill pill--rose" id="previewAdd">[добавить в корзину]</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="delivery section" id="delivery">
+  <div class="section__head" data-reveal>
+    <h2 class="title">Как это работает</h2>
+  </div>
+  <div class="steps">
+    <article class="steps__item" data-reveal>
+      <span class="steps__num">01</span>
+      <h3>Выбираете букет</h3>
+      <p>Из каталога или собираете свой в конструкторе — это занимает пару минут.</p>
+    </article>
+    <article class="steps__item" data-reveal style="--d:.12s">
+      <span class="steps__num">02</span>
+      <h3>Мы собираем</h3>
+      <p>Флорист срезает свежие стебли, подбирает зелень и перевязывает лентой вручную.</p>
+    </article>
+    <article class="steps__item" data-reveal style="--d:.24s">
+      <span class="steps__num">03</span>
+      <h3>Привозим с заботой</h3>
+      <p>Доставка по городу от 90 минут. Можно выбрать время и приложить открытку.</p>
+    </article>
+  </div>
+</section>
+
+<section class="reviews section" id="reviews">
+  <div class="section__head" data-reveal>
+    <h2 class="title">Отзывы</h2>
+  </div>
+  <div class="slider" data-reveal>
+    <div class="slider__track" id="sliderTrack"></div>
+    <div class="slider__dots" id="sliderDots"></div>
+  </div>
+</section>
+
+<section class="contacts section" id="contacts">
+  <div class="contacts__grid">
+    <div class="contacts__info" data-reveal>
+      <h2 class="title">Заходите<br>в гости</h2>
+      <ul class="contacts__list">
+        <li><span>адрес</span>г. Уфа, ул. Ленина, 15<br>(вход со двора, под вывеской с анемонами)</li>
+        <li><span>часы работы</span>ежедневно с 9:00 до 21:00</li>
+        <li><span>телефон</span><a href="tel:+79000000000">+7 (900) 000-00-00</a></li>
+        <li><span>почта</span><a href="mailto:hello@anemona.demo">hello@anemona.demo</a></li>
+      </ul>
+      <div class="hero__actions">
+        <a href="#" class="pill pill--rose">[telegram]</a>
+        <a href="#" class="pill pill--line">[instagram]</a>
+      </div>
+    </div>
+    <div class="map" data-reveal style="--d:.15s">
+      <iframe
+        title="Яндекс Карта — мастерская Анемона"
+        src="https://yandex.ru/map-widget/v1/?ll=55.958727%2C54.735152&z=16&pt=55.958727%2C54.735152%2Cpm2rdl&l=map"
+        loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p class="footer__brand">Анемона</p>
+  <p>© 2026 · демонстрационный сайт · все данные вымышлены</p>
+  <a href="#top" class="footer__up">наверх ↑</a>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Корзина" aria-hidden="true">
+  <div class="drawer__head">
+    <h3>Корзина</h3>
+    <button class="drawer__close" id="cartClose" aria-label="Закрыть">×</button>
+  </div>
+  <div class="drawer__body" id="cartBody"></div>
+  <div class="drawer__foot" id="cartFoot">
+    <div class="drawer__total"><span>Итого</span><b id="cartTotal">0 ₽</b></div>
+    <form id="orderForm" class="order" novalidate>
+      <input class="field" name="name" placeholder="Ваше имя" required>
+      <input class="field" name="phone" placeholder="Телефон" inputmode="tel" required>
+      <input class="field" name="address" placeholder="Адрес доставки" required>
+      <button class="pill pill--rose pill--block" type="submit">[оформить заказ]</button>
+    </form>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="js/data.js"></script>
+<script src="js/art.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
